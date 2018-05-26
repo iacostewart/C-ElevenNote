@@ -62,6 +62,10 @@
     <Compile Include="Migrations\201805221736518_users Created working on notes.Designer.cs">
       <DependentUpon>201805221736518_users Created working on notes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805261545133_added Starred.cs" />
+    <Compile Include="Migrations\201805261545133_added Starred.Designer.cs">
+      <DependentUpon>201805261545133_added Starred.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805221736518_users Created working on notes.resx">
       <DependentUpon>201805221736518_users Created working on notes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805261545133_added Starred.resx">
+      <DependentUpon>201805261545133_added Starred.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
