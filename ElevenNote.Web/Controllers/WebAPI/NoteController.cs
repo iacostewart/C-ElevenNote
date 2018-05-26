@@ -10,29 +10,31 @@ using System.Web.Http;
 
 namespace ElevenNote.Web.Controllers.WebAPI
 {
+
+    [Authorize]
+    [RoutePrefix("api/Note")]
     public class NoteController : ApiController
     {
-
         private bool SetStarState(int noteId, bool newState)
         {
-            // create the service 
-            var userID = Guid.Parse(User.Identity.GetUserId());
+            // create the service
+            var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new NoteService(userId);
 
-            // get the note 
+            // Get the note
             var detail = service.GetNoteById(noteId);
 
-            // Create the NoteEdit model instance with the new star state 
-            var updateNote =
-                    new NoteEdit
-                    {
-                        noteId = detail.NoteId,
-                        Title = detail.Title,
-                        Content = detail.Content,
-                        IsStarred = newState
-                    };
-
-            // Create the 
+            // Create the NoteEdit Model instance with the new star state
+            var updatedNote =
+                new NoteEdit
+                {
+                    NoteId = detail.NoteId,
+                    Title = detail.Title,
+                    Content = detail.Content,
+                    IsStarred = newState
+                };
+            // Return a value indicating wether the update succeeded
+            return service.UpdateNote(updatedNote);
         }
 
         [Route("{id}/Star")]
@@ -42,5 +44,6 @@ namespace ElevenNote.Web.Controllers.WebAPI
         [Route("{id}/Star")]
         [HttpDelete]
         public bool ToggleStarOff(int id) => SetStarState(id, false);
+
     }
 }

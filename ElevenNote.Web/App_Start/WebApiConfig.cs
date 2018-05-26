@@ -14,14 +14,15 @@ namespace ElevenNote.Web.App_Start
         {
             GlobalConfiguration
                 .Configure(
-                    X =>
+                    x =>
                     {
+                        x 
                         .Formatters
                         .JsonFormatter
                         .SupportedMediaTypes
                         .Add(new MediaTypeHeaderValue("text/html"));
 
-                        X.MapHttpAttributeRoutes();
+                        x.MapHttpAttributeRoutes();
                     }
               );
         }
