@@ -9,22 +9,21 @@ namespace ElevenNote.Web.App_Start
 {
     public class WebApiConfig
     {
+
         public static void Register()
         {
             GlobalConfiguration
-                  .Configure(
-                    x =>
+                .Configure(
+                    X =>
                     {
-                        x
-                            .Formatters
-                            .JsonFormatter
-                            .SupportedMediaTypes
-                            .Add(new MediaTypeHeaderValue("text/html"));
+                        .Formatters
+                        .JsonFormatter
+                        .SupportedMediaTypes
+                        .Add(new MediaTypeHeaderValue("text/html"));
 
-                        x.MapHttpAttributeRoutes();
+                        X.MapHttpAttributeRoutes();
                     }
-                );
-                
+              );
         }
     }
 }
