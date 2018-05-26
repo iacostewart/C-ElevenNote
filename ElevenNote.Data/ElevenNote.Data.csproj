@@ -79,6 +79,10 @@
     <Compile Include="Migrations\201805261545133_added Starred.Designer.cs">
       <DependentUpon>201805261545133_added Starred.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805262123204_stars showing up still catching the error.. im hoping a dbmigrate will solve this.cs" />
+    <Compile Include="Migrations\201805262123204_stars showing up still catching the error.. im hoping a dbmigrate will solve this.Designer.cs">
+      <DependentUpon>201805262123204_stars showing up still catching the error.. im hoping a dbmigrate will solve this.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805261545133_added Starred.resx">
       <DependentUpon>201805261545133_added Starred.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805262123204_stars showing up still catching the error.. im hoping a dbmigrate will solve this.resx">
+      <DependentUpon>201805262123204_stars showing up still catching the error.. im hoping a dbmigrate will solve this.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
